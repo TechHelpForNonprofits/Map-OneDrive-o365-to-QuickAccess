@@ -15,28 +15,24 @@ In order to map quick access links we need to setup Intranet Zones so we're not 
 
 
 <h3>Powershell commands required to map to Quick Access Links:</h3>
- ```powershell<br>
+ ```powershell
+ 
 $destination = "c:\users\" + ${env:username} + "\links\"<br>
 $shell = New-Object -COM WScript.Shell<br>
 $shortcut = $shell.CreateShortcut($destination + "OneDrive-Access.lnk")  ## Create new lnk<br>
-$shortcut.TargetPath = "\\disabilityrightstexas-my.sharepoint.com@SSL\DavWWWRoot\personal\" + "%username%" + "_disabilityrightstx_org\Documents" ## Make changes
-$shortcut.WorkingDirectory = "%windir%" 
-$shortcut.Description = "OneDrive-Access"  ## This is the "Comment" field
-$shortcut.Save()  ## Save
+$shortcut.TargetPath = "\\yourcompanynamehere-my.sharepoint.com@SSL\DavWWWRoot\personal\" + "%username%" + "_yourcompanynamehere_org\Documents" ## Make changes<br>
+$shortcut.WorkingDirectory = "%windir%" <br>
+$shortcut.Description = "OneDrive-Access"  ## This is the "Comment" field<br>
+$shortcut.Save()  ## Save<br>
+```
+```powershell
 
-$destination = "c:\users\" + ${env:username} + "\links\"
-$shell = New-Object -COM WScript.Shell
-$shortcut = $shell.CreateShortcut($destination + "DRTx-Teams.lnk")  ## Create new lnk
-$shortcut.TargetPath = "\\disabilityrightstexas.sharepoint.com@SSL\DavWWWRoot\sites\Storage\DRTxTeams" ## Make changes
-$shortcut.Description = "DRTx-Teams"  ## This is the "Comment" field
-$shortcut.Save()  ## Save
-
-$destination = "c:\users\" + ${env:username} + "\links\"
-$shell = New-Object -COM WScript.Shell
-$shortcut = $shell.CreateShortcut($destination + "DRTx-Admin.lnk")  ## Create new lnk
-$shortcut.TargetPath = "\\disabilityrightstexas.sharepoint.com@SSL\DavWWWRoot\sites\Storage\DRTx" ## Make changes
-$shortcut.Description = "DRTx-Teams"  ## This is the "Comment" field
-$shortcut.Save()  ## Save 
+$destination = "c:\users\" + ${env:username} + "\links\"<br>
+$shell = New-Object -COM WScript.Shell<br>
+$shortcut = $shell.CreateShortcut($destination + "NameOfLinkHere.lnk")  ## Create new lnk<br>
+$shortcut.TargetPath = "\\yourcompanynamehere.sharepoint.com@SSL\DavWWWRoot\sites\Storage\LibraryNameHere" ## Make changes<br>
+$shortcut.Description = "DescriptionofLibraryNameHere"  ## This is the "Comment" field<br>
+$shortcut.Save()  ## Save<br>
 
 ```
 

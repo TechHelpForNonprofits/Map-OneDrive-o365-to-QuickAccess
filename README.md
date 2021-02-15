@@ -6,6 +6,5 @@ If you don't want to install OneDrive Sync or log into Office.com everytime you 
 <h3>Prerequisites:</h3>
             <li>Local Intranet sites - Open Internet Explorer, Open Settings icon at top right, choose Internet Options, Open Security tab, choose Local Intranet and hit Sites button.</li>
             <li>When you open the Sites button you'll see this screen.</li>
-            <li>![Local Intranet](./Local-Intranet.png?raw=true "Local Intranet")</li>
-            <li><img src="./Local-Intranet.png" "Local Intranet Settings" ></li>
+            <li><img src="./Local-Intranet.png" alt="Local Intranet Settings"></li>
 <ol>  

@@ -8,6 +8,6 @@ If you don't want to install OneDrive Sync or log into Office.com everytime you 
             <li>When you open the Sites button you'll see this screen.</li>
             <img src="./Local-Intranet.png" alt="Local Intranet Settings">
             <li>Click the <b>Advanced</b> button</li>
-            <li>Now add https://*.sharepoint.com to the zone</li>
+            <li>Now add <b>https://*.sharepoint.com</b> to the zone and choose <b>Close</b></li>
             <img src="./Intranet-Zone.png" alt="Websites to add to Zone">
 <ol>  

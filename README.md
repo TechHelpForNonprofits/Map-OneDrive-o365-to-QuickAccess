@@ -13,31 +13,30 @@ In order to map quick access links we need to setup Intranet Zones so we're not 
             <img src="./Intranet-Zone.png" alt="Websites to add to Zone">
 </ol>  
 
-
 <h3>Powershell commands required to map to Quick Access Links:</h3>
 
-
+            <h2>Setup Quick Access link for OneDrive</h2>
 ```powershell
- <ol>
-<li>$destination = "c:\users\" + ${env:username} + "\links\"<br></li>
-<li>$shell = New-Object -COM WScript.Shell<br></li>
-<li>$shortcut = $shell.CreateShortcut($destination + "OneDrive-Access.lnk")  ## Create new lnk<br></li>
-<li>$shortcut.TargetPath = "\\yourcompanynamehere-my.sharepoint.com@SSL\DavWWWRoot\personal\" + "%username%" + "_yourcompanynamehere_org\Documents" ## Make changes<br></li>
-<li>$shortcut.WorkingDirectory = "%windir%" <br></li>
-<li>$shortcut.Description = "OneDrive-Access"  ## This is the "Comment" field<br></li>
-<li>$shortcut.Save()  ## Save<br></li>
-</ol>
+
+            $destination = "c:\users\" + ${env:username} + "\links\"<br>
+            $shell = New-Object -COM WScript.Shell<br>
+            $shortcut = $shell.CreateShortcut($destination + "OneDrive-Access.lnk")  ## Create new lnk<br>
+            $shortcut.TargetPath = "\\yourcompanynamehere-my.sharepoint.com@SSL\DavWWWRoot\personal\" + "%username%" + "_yourcompanynamehere_org\Documents" ## Make changes<br>
+            $shortcut.WorkingDirectory = "%windir%" <br>
+            $shortcut.Description = "OneDrive-Access"  ## This is the "Comment" field<br>
+            $shortcut.Save()  ## Save<br>
+
 ```
 
 
 ```powershell
 
-$destination = "c:\users\" + ${env:username} + "\links\"<br>
-$shell = New-Object -COM WScript.Shell<br>
-$shortcut = $shell.CreateShortcut($destination + "NameOfLinkHere.lnk")  ## Create new lnk<br>
-$shortcut.TargetPath = "\\yourcompanynamehere.sharepoint.com@SSL\DavWWWRoot\sites\Storage\LibraryNameHere" ## Make changes<br>
-$shortcut.Description = "DescriptionofLibraryNameHere"  ## This is the "Comment" field<br>
-$shortcut.Save()  ## Save<br>
+            $destination = "c:\users\" + ${env:username} + "\links\"<br>
+            $shell = New-Object -COM WScript.Shell<br>
+            $shortcut = $shell.CreateShortcut($destination + "NameOfLinkHere.lnk")  ## Create new lnk<br>
+            $shortcut.TargetPath = "\\yourcompanynamehere.sharepoint.com@SSL\DavWWWRoot\sites\Storage\LibraryNameHere" ## Make changes<br>
+            $shortcut.Description = "DescriptionofLibraryNameHere"  ## This is the "Comment" field<br>
+            $shortcut.Save()  ## Save<br>
 
 ```
 

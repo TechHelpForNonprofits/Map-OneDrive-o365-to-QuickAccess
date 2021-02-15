@@ -16,17 +16,19 @@ In order to map quick access links we need to setup Intranet Zones so we're not 
 
 <h3>Powershell commands required to map to Quick Access Links:</h3>
 
- ```powershell
- 
-$destination = "c:\users\" + ${env:username} + "\links\"<br>
-$shell = New-Object -COM WScript.Shell<br>
-$shortcut = $shell.CreateShortcut($destination + "OneDrive-Access.lnk")  ## Create new lnk<br>
-$shortcut.TargetPath = "\\yourcompanynamehere-my.sharepoint.com@SSL\DavWWWRoot\personal\" + "%username%" + "_yourcompanynamehere_org\Documents" ## Make changes<br>
-$shortcut.WorkingDirectory = "%windir%" <br>
-$shortcut.Description = "OneDrive-Access"  ## This is the "Comment" field<br>
-$shortcut.Save()  ## Save<br>
 
+```powershell
+ <ol>
+<li>$destination = "c:\users\" + ${env:username} + "\links\"<br></li>
+<li>$shell = New-Object -COM WScript.Shell<br></li>
+<li>$shortcut = $shell.CreateShortcut($destination + "OneDrive-Access.lnk")  ## Create new lnk<br></li>
+<li>$shortcut.TargetPath = "\\yourcompanynamehere-my.sharepoint.com@SSL\DavWWWRoot\personal\" + "%username%" + "_yourcompanynamehere_org\Documents" ## Make changes<br></li>
+<li>$shortcut.WorkingDirectory = "%windir%" <br></li>
+<li>$shortcut.Description = "OneDrive-Access"  ## This is the "Comment" field<br></li>
+<li>$shortcut.Save()  ## Save<br></li>
+</ol>
 ```
+
 
 ```powershell
 

@@ -15,6 +15,7 @@ In order to map quick access links we need to setup Intranet Zones so we're not 
 
 
 <h3>Powershell commands required to map to Quick Access Links:</h3>
+
  ```powershell
  
 $destination = "c:\users\" + ${env:username} + "\links\"<br>

@@ -15,11 +15,10 @@ In order to map quick access links we need to setup Intranet Zones so we're not 
 
 
 <h3>Powershell commands required to map to Quick Access Links:</h3>
- ```powershell
- 
-$destination = "c:\users\" + ${env:username} + "\links\"
-$shell = New-Object -COM WScript.Shell
-$shortcut = $shell.CreateShortcut($destination + "OneDrive-Access.lnk")  ## Create new lnk
+ ```powershell<br>
+$destination = "c:\users\" + ${env:username} + "\links\"<br>
+$shell = New-Object -COM WScript.Shell<br>
+$shortcut = $shell.CreateShortcut($destination + "OneDrive-Access.lnk")  ## Create new lnk<br>
 $shortcut.TargetPath = "\\disabilityrightstexas-my.sharepoint.com@SSL\DavWWWRoot\personal\" + "%username%" + "_disabilityrightstx_org\Documents" ## Make changes
 $shortcut.WorkingDirectory = "%windir%" 
 $shortcut.Description = "OneDrive-Access"  ## This is the "Comment" field

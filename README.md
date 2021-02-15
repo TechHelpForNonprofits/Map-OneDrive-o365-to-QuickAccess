@@ -24,7 +24,9 @@ $shortcut.TargetPath = "\\yourcompanynamehere-my.sharepoint.com@SSL\DavWWWRoot\p
 $shortcut.WorkingDirectory = "%windir%" <br>
 $shortcut.Description = "OneDrive-Access"  ## This is the "Comment" field<br>
 $shortcut.Save()  ## Save<br>
+
 ```
+
 ```powershell
 
 $destination = "c:\users\" + ${env:username} + "\links\"<br>

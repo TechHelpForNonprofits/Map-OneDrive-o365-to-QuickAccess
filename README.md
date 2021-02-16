@@ -43,6 +43,6 @@ In order to map quick access links we need to setup Intranet Zones so we're not 
 
 ```
 
-
+<br>
 Here is what you'll see after running the script. You'll notice there are now two "Documents" folders under Quick Access, one for your local Documents and one for OneDrive. Do NOT rename the OneDrive Documents folder. It's a mess to fix if you do!
 <img src="./QuickAccessLinks.png" alt="Final result after running script">

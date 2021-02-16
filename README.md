@@ -50,4 +50,4 @@ Here is what you'll see after running the script. You'll notice there are now tw
 <img src="./QuickAccessLinks.png" alt="Final result after running script">
 
 <h4>How to deploy the script</h4>
-Download the powershell script QuickAccess.ps1
+Download the powershell script <a href="QuickAccess.ps1" download>QuickAccess.ps1</a>

@@ -54,10 +54,16 @@ Here is what you'll see after running the script. You'll notice there are now tw
             <li>Download the powershell script <a href="QuickAccess.ps1" download>QuickAccess.ps1</a> or copy and paste from example above.</li>
             <li>Make necessary changes to variables inside of script and save to desktop or someplace else.</li>
             <li>To run the script right mouse click the file and choose Run with Powershell</li>
-</lo>            
+</lo>  
+<br>
              <img src="./RunAs.png" alt="Right mouse click script and choose Run from Powershell">
    
-            
+If you get an error while running the script you may need to set the execution policy for Powershell. To do that open Powershell and run:
+```powershell
+
+Set-ExecutionPolicy -ExecutionPolicy Bypass
+
+```
 
 
 

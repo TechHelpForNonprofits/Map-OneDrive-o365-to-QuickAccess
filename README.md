@@ -1,7 +1,7 @@
 # Map-OneDrive-o365-to-QuickAccess
 <h2>How to add Office 365 and OneDrive libraries to your Quick Access bar.</h2>
 If you don't want to install OneDrive Sync or log into Office.com everytime you need to access a file you can setup Quick Access links to any Office 365 Sharepoint library or your OneDrive.
-In order to map quick access links we need to setup Intranet Zones so we're not having to login every single time.
+In order to map quick access links we need to setup Intranet Zones so we're not having to login every single time. 
 
 <ol>
 <h3>Setup Intranet Zone on Internet Explorer:</h3>
@@ -11,6 +11,7 @@ In order to map quick access links we need to setup Intranet Zones so we're not 
             <li>Click the <b>Advanced</b> button</li>
             <li>Now add <b>https://*.sharepoint.com</b> to the zone and choose <b>Close</b></li>
             <img src="./Intranet-Zone.png" alt="Websites to add to Zone">
+            <li>Your Intranet Zone is now setup.</li>
 </ol>  
 
 <h3>Powershell commands required to map to Quick Access Links:</h3>

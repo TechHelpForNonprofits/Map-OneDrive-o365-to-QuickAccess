@@ -48,3 +48,6 @@ You can add additional Sharepoint libraries to this script, just add to the $fol
 <br>
 Here is what you'll see after running the script. You'll notice there are now two "Documents" folders under Quick Access, one for your local Documents and one for OneDrive. Do NOT rename the OneDrive Documents folder. It's a mess to fix if you do!
 <img src="./QuickAccessLinks.png" alt="Final result after running script">
+
+<h4>How to deploy the script</h4>
+Download the powershell script QuickAccess.ps1

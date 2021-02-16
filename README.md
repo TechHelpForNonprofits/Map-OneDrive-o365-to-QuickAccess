@@ -1,4 +1,4 @@
-# Map-OneDrive-o365-to-QuickAccess
+# Map-OneDrive-o365-to-QuickAccess-bar
 <h2>How to add Office 365 and OneDrive libraries to your Quick Access bar.</h2>
 If you don't want to install OneDrive Sync or log into Office.com everytime you need to access a file you can setup Quick Access links to any Office 365 Sharepoint library or your OneDrive.
 In order to map quick access links we need to setup Intranet Zones so we're not having to login every single time. 

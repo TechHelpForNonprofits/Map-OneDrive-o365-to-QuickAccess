@@ -42,3 +42,5 @@ In order to map quick access links we need to setup Intranet Zones so we're not 
             $QuickAccess.Namespace($folder1).Self.InvokeVerb("pintohome")
 
 ```
+
+Here is what you'll see after running the script.

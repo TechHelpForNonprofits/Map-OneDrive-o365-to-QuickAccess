@@ -29,6 +29,7 @@ In order to map quick access links we need to setup Intranet Zones so we're not 
 <h4>Map OneDrive and Sharepoint Library</h4>
 
 ```powershell
+
             $ie = Start-Process -file iexplore -arg 'https:// + $CompanyName + .sharepoint.com/sites/ + $SharepointLibrary' -PassThru -WindowStyle Minimized
             sleep 8
             $ie.Kill()
@@ -42,6 +43,7 @@ In order to map quick access links we need to setup Intranet Zones so we're not 
             $QuickAccess.Namespace($folder1).Self.InvokeVerb("pintohome")
 
 ```
+You can add additional Sharepoint libraries to this script, just add to the $folder2 and $QuickAccess.Namespace($folder2) lines. Once you run the script you'll be prompted once for your Office 365 Credentials. After that process the token will be saved for as long as four days. After that You'll have to run the script again. I would suggest running in a login script or through the Windows Task Scheduler.
 
 <br>
 Here is what you'll see after running the script. You'll notice there are now two "Documents" folders under Quick Access, one for your local Documents and one for OneDrive. Do NOT rename the OneDrive Documents folder. It's a mess to fix if you do!

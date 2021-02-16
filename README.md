@@ -19,11 +19,12 @@ In order to map quick access links we need to setup Intranet Zones so we're not 
 <h4>Setup Quick Access link for OneDrive</h4>
 
 ```powershell
-
+            $MyCompanyName = ## Type in your Domain name here ex.. Microsoft 
+            $MyDomainName = ## Type in your Full Domain name here ex.. _Microsoft_com
             $destination = "c:\users\" + ${env:username} + "\links\"<br> ## If this is only for one person you can just plug in your username where $destination is below
             $shell = New-Object -COM WScript.Shell<br> 
             $shortcut = $shell.CreateShortcut($destination + "OneDrive-Access.lnk")  ## Create new link shortcut<br>
-            $shortcut.TargetPath = "\\yourcompanynamehere-my.sharepoint.com@SSL\DavWWWRoot\personal\" + "%username%" + "_yourcompanynamehere_org\Documents" ## Replace yourcompanynamehere with your real domain name on Office 365<br>
+            $shortcut.TargetPath = "\\"%MyCompanyName%"-my.sharepoint.com@SSL\DavWWWRoot\personal\" + "%username%" + ""%MyDomainName%"\Documents" ## Target CompanyName and DomainName<br>
             $shortcut.WorkingDirectory = "%windir%" <br>
             $shortcut.Description = "OneDrive-Access"  ## This is the "Comment" field. YOu can set this to whatever you like<br>
             $shortcut.Save()  ## Save<br>
@@ -33,13 +34,16 @@ In order to map quick access links we need to setup Intranet Zones so we're not 
 <h4>Setup Quick Access link for Office 365 Sharepoint Library</h4>
 
 ```powershell
-
+            $MyCompanyName = ## Type in your Domain name here ex.. Microsoft 
+            $MyDomainName = ## Type in your Full Domain name here ex.. _Microsoft_com
+            $NameofLink = ## Type in descriptive name for your link to the Office 365 Library ex.. HR-Docs.lnk
+            $LibraryName = ## Type in actual library name for Office 365 library
             $destination = "c:\users\" + ${env:username} + "\links\"<br> ## same as above example
             $shell = New-Object -COM WScript.Shell<br>
-            $shortcut = $shell.CreateShortcut($destination + "NameOfLinkHere.lnk")  ## Change NameofLinkHere to whatever you want for link description<br> 
-            $shortcut.TargetPath = "\\yourcompanynamehere.sharepoint.com@SSL\DavWWWRoot\sites\Storage\LibraryNameHere" ## Change yourcompanynamehere to your real domain on Office 365 and change LibraryNameHere to your document library name<br>
-            $shortcut.Description = "DescriptionofLibraryNameHere"  ## You can set DescriptionofLibraryNameHere to whatever. It's the comment<br>
-            $shortcut.Save()  ## Save<br>
+            $shortcut = $shell.CreateShortcut($destination + "%NameOfLink%")  ## Link name for library<br> 
+            $shortcut.TargetPath = "\\"%MyCompanyName%".sharepoint.com@SSL\DavWWWRoot\sites\Storage\"%LibraryName%"" ## shortcut to Office 365 library<br>
+            $shortcut.Description = "DescriptionofLibraryNameHere"  ## You can set DescriptionofLibraryNameHere to whatever you want like HR-Docs. It's the comment<br>
+            $shortcut.Save()  ## Saves shortcut<br>
 
 ```
 

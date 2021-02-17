@@ -20,9 +20,9 @@ In order to map quick access links we need to setup Intranet Zones so we're not 
 
 ```powershell
 
-            $CompanyName = "disabilityrightstexas" ## full company name from Office 365 ex. "Microsoft"
-            $SharepointLibrary = "Storage/test" ## site and library name ex. Storage/Test
-            $DomainName = "_disabilityrightstx_org" ## full domain name including underscores ex. "_Microsoft_com"
+            $CompanyName =  ## full company name from Office 365 ex. "Microsoft"
+            $SharepointLibrary =  ## site and library name ex. "Storage/Test"
+            $DomainName =  ## full domain name including underscores ex. "_Microsoft_com"
 
 ```
 

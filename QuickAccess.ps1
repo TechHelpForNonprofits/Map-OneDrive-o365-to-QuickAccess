@@ -2,7 +2,7 @@
 
 ## Please set these variables
 $CompanyName =   ## full company name from Office 365 ex. "Microsoft"
-$SharepointLibrary =   ## site name and library name ex. "Storage/Test"
+$SharepointLibrary =   ## site name and library name ex. "Storage\Test"
 $DomainName =   ## full domain name including underscores ex. "_Microsoft_com"
 ## Do not change anything past this point
 
